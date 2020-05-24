@@ -1,17 +1,31 @@
-<ion-header [translucent]="true">
+<ion-header translucent={true}>
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title>Upcoming Event</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-card>
+  <ion-item>
+    <ion-icon name="alarm-outline" slot="start"></ion-icon>
+    <ion-label>May 24, 11:30 AM</ion-label>
+    <ion-button fill="outline" slot="end">View</ion-button>
+  </ion-item>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <ion-item>Start Time: 11:30 AM</ion-item>
+  <ion-item>End Time: 12:30 AM</ion-item>
+  <ion-item>Title: Developing Calendar</ion-item>
+  <ion-item>Location: At Home</ion-item>
+</ion-card>
+
+<ion-card>
+  <ion-item>
+    <ion-icon name="alarm-outline" slot="start"></ion-icon>
+    <ion-label>May 24, 11:30 AM</ion-label>
+    <ion-button fill="outline" slot="end">View</ion-button>
+  </ion-item>
+
+  <ion-item>Start Time: 11:30 AM</ion-item>
+  <ion-item>End Time: 12:30 AM</ion-item>
+  <ion-item>Title: Developing Calendar</ion-item>
+  <ion-item>Location: At Home</ion-item>
+</ion-card>

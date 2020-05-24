@@ -1,5 +1,7 @@
 {
   "name": "CP317-Calendar",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
