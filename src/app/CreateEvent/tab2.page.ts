@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab2',
@@ -8,7 +9,10 @@ import { ToastController } from '@ionic/angular';
 })
 export class Tab2Page {
 
-  constructor(public toastController: ToastController) {}
+  constructor(
+    public toastController: ToastController,
+    public router: Router
+    ) {}
 
   titleText: string;
   locationText: string;
@@ -34,5 +38,14 @@ export class Tab2Page {
       ]
     });
     toast.present();
+
+    this.router.navigate(['tabs/tab1'], {queryParams: {
+      titleText: this.titleText,
+      locationText: this.locationText,
+      startDateText: this.startDateText,
+      startTimeText: this.startTimeText,
+      endTimeText: this.endTimeText,
+      endDateText: this.endDateText,
+    }});
   }
 }

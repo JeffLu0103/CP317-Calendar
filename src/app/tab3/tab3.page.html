@@ -1,41 +1,55 @@
-<!-- Default Input -->
-<ion-input></ion-input>
+<ion-header translucent={true}>
+  <ion-toolbar>
+    <ion-title>Setting</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-<!-- Input with value -->
-<ion-input value="custom"></ion-input>
-
-<!-- Input with placeholder -->
-<ion-input placeholder="Enter Input"></ion-input>
-
-<!-- Input with clear button when there is a value -->
-<ion-input clearInput value="clear me"></ion-input>
-
-<!-- Number type input -->
-<ion-input type="number" value="333"></ion-input>
-
-<!-- Disabled input -->
-<ion-input value="Disabled" disabled></ion-input>
-
-<!-- Readonly input -->
-<ion-input value="Readonly" readonly></ion-input>
-
-<!-- Inputs with labels -->
-<ion-item>
-  <ion-label>Default Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
-
-<ion-item>
-  <ion-label position="floating">Floating Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
-
-<ion-item>
-  <ion-label position="fixed">Fixed Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
-
-<ion-item>
-  <ion-label position="stacked">Stacked Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
+<ion-content fullscreen={true}>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="mail-outline" slot="start"></ion-icon>
+      <ion-label>Email Address</ion-label>
+      <ion-button fill="outline" slot="end">Edit</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="xuex1230@mylaurier.ca"></ion-input>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-item>
+      <ion-icon name="alarm-outline" slot="start"></ion-icon>
+      <ion-label>Alarm Preference</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-segment>
+        <ion-segment-button value="mute">
+          <ion-icon name="volume-mute-outline"></ion-icon>
+          <ion-label>mute</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Vibrate">
+          <ion-icon name="volume-low-outline"></ion-icon>
+          <ion-label>Vibrate</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Sound">
+          <ion-icon name="volume-high-outline"></ion-icon>
+          <ion-label>Sound</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-item>
+      <ion-icon name="moon-outline" slot="start"></ion-icon>
+      <ion-label>Dark Mode</ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-item>
+      <ion-icon name="earth-outline" slot="start"></ion-icon>
+      <ion-label>Language</ion-label>
+      <ion-select>
+        <ion-select-option value="English">English</ion-select-option>
+        <ion-select-option value="Chinese">Chinese</ion-select-option>
+        <ion-select-option value="French">French</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>
